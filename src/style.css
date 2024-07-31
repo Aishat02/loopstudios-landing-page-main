@@ -186,8 +186,8 @@ footer {
 }
 @media (min-width: 1024px) {
   body {
-    width: 100%;
-    margin: 0;
+    width: 1440px;
+    overflow-x: hidden;
   }
   .header {
     background: url("../images/desktop/image-hero.jpg") no-repeat;
@@ -408,8 +408,7 @@ footer {
     justify-content: left;
     padding-left: 7.95em;
   }
-  a .social-icon {
-    transition: all 0.2ms ease-in;
+  .social-icon:hover {
     cursor: url("../images/cursor.svg"), auto;
   }
   .social-icon:hover::after {
