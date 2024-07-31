@@ -10,7 +10,7 @@ function menu() {
   headerText.classList.toggle("active");
   let headerImages = document.querySelector(".header-images");
   headerImages.classList.toggle("active");
-
+    
   let changeImage = document.querySelector("#menu-image");
   changeImage.classList.toggle("active");
   if (changeImage.classList.contains("active")) {

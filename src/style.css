@@ -4,6 +4,9 @@
   --DarkGray: hsl(0, 0%, 55%);
   --VeryDarkGray: hsl(0, 0%, 41%);
 }
+* {
+  box-sizing: border-box;
+}
 body {
   text-align: center;
   min-height: 100vh;
@@ -162,7 +165,7 @@ nav a {
 }
 footer {
   color: var(--DarkGray);
-  margin: 1.2em;
+  margin-top: 1.2em;
   font-size: 31px;
   padding-right: 3px;
 }
@@ -181,14 +184,17 @@ footer {
 .mobile {
   display: block;
 }
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   body {
-    width: 106.5%;
+    width: 100%;
+    margin: 0;
   }
   .header {
     background: url("../images/desktop/image-hero.jpg") no-repeat;
-    margin-bottom: -30.6em;
+    height: 650px;
     filter: brightness(0.7);
+    width: 1440px;
+    margin-bottom: 10em;
   }
   .header-images {
     margin: 0 0 8.67em 7.3em;
@@ -201,8 +207,8 @@ footer {
     display: block;
     background: none;
     text-transform: none;
-    padding-top: 0;
-    width: 1227px;
+    padding: 0;
+    width: 79.7rem;
   }
   .hidden-nav nav {
     font-size: 14px;
@@ -215,28 +221,32 @@ footer {
     color: var(--White);
     position: relative;
     transition: all 0.4s ease-in;
+    font-weight: 600;
   }
   nav a:hover::after {
     content: "";
     display: block;
     background-color: var(--White);
     height: 2px;
-    width: 45%;
+    width: 48%;
     position: absolute;
-    top: 104%;
-    left: 17px;
+    top: 33px;
+    left: 12px;
   }
   header {
     font-size: 72px;
     border: 2px solid var(--White);
     margin: 0 0 0 2.28em;
     padding: 40px 42px 26px 38px;
-    width: 39.5%;
+    width: 652px;
     line-height: 0.97em;
+  }
+  .container {
+    width: 1440px;
   }
   .mid {
     padding-left: 10.25em;
-    width: 30%;
+    width: 1440px;
     margin: 0;
   }
   .mobile {
@@ -254,11 +264,12 @@ footer {
       0% 100%,
       0% 0%
     );
-  }
-  .subb {
     position: relative;
-    left: 35.65em;
-    bottom: 19.85em;
+  }
+  .sub {
+    position: absolute;
+    left: 45.85rem;
+    top: 62.05em;
   }
   .sub-header {
     font-family: "JOSEFIN SANS";
@@ -268,27 +279,26 @@ footer {
     line-height: 1em;
     padding-left: 1.72em;
     text-align: center;
-    width: 392px;
+    width: 476px;
   }
   .text-header {
     margin-right: -26px;
   }
   .text {
     font-size: 15.5px;
-    padding-left: 5.5em;
+    margin: 0 0 0 6.15em;
     line-height: 1.61em;
-    width: 455px;
+    width: 452px;
     text-align: left;
   }
   .creations-header {
     position: relative;
     font-size: 49px;
-    margin: -2.76em -16px 1.63em;
+    margin: 3.75em -16px 1.62em;
     word-spacing: -5px;
-    width: 100%;
+    width: 431px;
   }
   .creations {
-    width: 1114px;
     gap: 0;
   }
   .row {
@@ -298,6 +308,7 @@ footer {
   }
   .image-container {
     height: 450px;
+    filter: brightness(0.6);
   }
   .overlay-container {
     width: 100%;
@@ -316,6 +327,7 @@ footer {
   .overlay:hover,
   .overlay-container:hover {
     opacity: 1;
+    cursor: url("../images/cursor.svg"), auto;
     color: var(--Black);
   }
   .hide {
@@ -381,7 +393,7 @@ footer {
   }
   .footer-nav a:hover::after {
     width: 46%;
-    top: 99%;
+    top: 40px;
     left: 14px;
   }
   .column2 {
@@ -394,16 +406,17 @@ footer {
     position: relative;
     gap: 16px;
     justify-content: left;
-    padding-left: 8.2em;
+    padding-left: 7.95em;
   }
-  .social-icon {
+  a .social-icon {
     transition: all 0.2ms ease-in;
+    cursor: url("../images/cursor.svg"), auto;
   }
   .social-icon:hover::after {
     content: "";
     background-color: var(--White);
     height: 2px;
-    width: 5.5%;
+    width: 24px;
     position: absolute;
     top: 32px;
     margin-left: -1.5em;
