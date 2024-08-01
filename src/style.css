@@ -71,12 +71,18 @@ header {
   line-height: 0.95em;
   text-align: left;
 }
-.mid,
+.hero,
 .creations-header {
   width: 654px;
   margin: 0 auto;
 }
-.sub-header {
+.desktop {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+h1 {
   font-family: "JOSEFIN SANS";
   text-transform: uppercase;
   font-size: 64px;
@@ -113,6 +119,7 @@ button {
   letter-spacing: 9px;
   border: 2px solid var(--Black);
   padding-left: 3px;
+  background-color: var(--White);
 }
 .hide {
   padding: 0 7.5em 0 0.84em;
@@ -130,7 +137,7 @@ button {
 .grid {
   width: 10px;
 }
-.footer {
+.information {
   background-color: var(--Black);
   padding: 7em 0 0;
   margin-left: 1px;
@@ -163,9 +170,9 @@ nav a {
 .x-icon {
   height: 40px;
 }
-footer {
+.copyright {
   color: var(--DarkGray);
-  margin-top: 1.2em;
+  margin: 1.2em 0 0;
   font-size: 31px;
   padding-right: 3px;
 }
@@ -178,27 +185,35 @@ footer {
   align-items: center;
   padding: 0;
 }
-.desktop {
-  display: none;
+.attribution {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Alata", sans-serif;
+  background: black;
+  color: white;
 }
-.mobile {
-  display: block;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   body {
-    width: 1440px;
-    overflow-x: hidden;
+    width: 1349px;
+    margin: 0;
   }
   .header {
     background: url("../images/desktop/image-hero.jpg") no-repeat;
-    height: 650px;
     filter: brightness(0.7);
-    width: 1440px;
+    width: 1349px;
+    background-position: center right;
+    background-attachment: fixed;
+    background-size: cover;
     margin-bottom: 10em;
   }
   .header-images {
-    margin: 0 0 8.67em 7.3em;
+    margin: 0 0 8.67em;
+    gap: 0;
     padding-top: 4em;
+    padding-left: 10.29em;
   }
   .header-logo {
     height: 32px;
@@ -208,7 +223,7 @@ footer {
     background: none;
     text-transform: none;
     padding: 0;
-    width: 79.7rem;
+    width: 78.3rem;
   }
   .hidden-nav nav {
     font-size: 14px;
@@ -242,12 +257,11 @@ footer {
     line-height: 0.97em;
   }
   .container {
-    width: 1440px;
+    width: 1349px;
   }
-  .mid {
-    padding-left: 10.25em;
-    width: 1440px;
-    margin: 0;
+  .hero {
+    padding-left: 8.25em;
+    width: unset;
   }
   .mobile {
     display: none;
@@ -266,12 +280,12 @@ footer {
     );
     position: relative;
   }
-  .sub {
-    position: absolute;
-    left: 45.85rem;
-    top: 62.05em;
-  }
   .sub-header {
+    position: absolute;
+    left: 43.85rem;
+    top: 102.7em;
+  }
+  h1 {
     font-family: "JOSEFIN SANS";
     text-transform: uppercase;
     font-size: 48px;
@@ -280,6 +294,7 @@ footer {
     padding-left: 1.72em;
     text-align: center;
     width: 476px;
+    font-weight: 100;
   }
   .text-header {
     margin-right: -26px;
@@ -308,7 +323,6 @@ footer {
   }
   .image-container {
     height: 450px;
-    filter: brightness(0.6);
   }
   .overlay-container {
     width: 100%;
@@ -348,15 +362,15 @@ footer {
     font-size: 16px;
     letter-spacing: 3px;
     position: absolute;
-    left: 1120px;
-    top: 1497px;
+    left: 68rem;
+    top: 134.2rem;
   }
-  .footer {
+  .information {
     margin: 9.6em 0 0;
     height: auto;
     display: flex;
     justify-content: space-between;
-    padding: 2.75em 0 1em;
+    padding: 2.75em 0 0;
   }
   .column1 {
     display: flex;
@@ -385,13 +399,13 @@ footer {
     background-color: var(--Black);
     color: var(--White);
   }
-  .footer nav {
+  .information nav {
     gap: 34px;
   }
-  .footer-nav a {
+  .information-nav a {
     font-weight: normal;
   }
-  .footer-nav a:hover::after {
+  .information-nav a:hover::after {
     width: 46%;
     top: 40px;
     left: 14px;
@@ -426,7 +440,7 @@ footer {
   .x-icon {
     height: 20px;
   }
-  footer {
+  .copyright {
     font-size: 15.5px;
     padding-right: 4.59em;
     margin: -3px 0 0;
